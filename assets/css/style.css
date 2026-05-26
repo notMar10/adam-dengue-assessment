@@ -141,6 +141,7 @@ body {
     font-size: 1rem;
     line-height: 1.4;
 }
+
 .awareness-alert {
     padding: 1rem 1.125rem;
     background: #fff5f7;
@@ -151,16 +152,17 @@ body {
 .awareness-alert h3 {
     color: var(--color-primary-dark);
 }
+
 .awareness-alert .awareness-list li::before {
     background: var(--color-primary);
 }
+
 .awareness-alert-note {
     margin-top: 0.65rem;
     font-size: 0.8125rem !important;
     font-weight: 600;
     color: var(--color-primary-dark) !important;
 }
-
 
 /* Brand header */
 .brand {
@@ -181,7 +183,10 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 1rem;
+}
+
+.page-footer .brand-badge {
+    margin-top: 1.25rem;
 }
 
 .brand-badge::before {
@@ -202,8 +207,87 @@ body {
     line-height: 1.1;
 }
 
-.brand h1 span {
+.brand-acronym {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.acronym-letter {
+    position: relative;
+    cursor: help;
+    transition: color var(--transition), transform var(--transition);
+    outline: none;
+}
+
+.acronym-letter--accent {
     color: var(--color-primary);
+}
+
+.acronym-letter:hover,
+.acronym-letter:focus-visible {
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.acronym-dot {
+    color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+    user-select: none;
+}
+
+.acronym-letter::after {
+    content: attr(data-meaning);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 0.55rem);
+    transform: translateX(-50%) translateY(6px);
+    padding: 0.35rem 0.65rem;
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #fff;
+    background: rgba(15, 20, 25, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+    z-index: 10;
+}
+
+.acronym-letter::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 0.2rem);
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: rgba(15, 20, 25, 0.92);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition), visibility var(--transition);
+    z-index: 10;
+}
+
+.acronym-letter:hover::after,
+.acronym-letter:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.acronym-letter:hover::before,
+.acronym-letter:focus-visible::before {
+    opacity: 1;
+    visibility: visible;
 }
 
 .brand .subtitle {
