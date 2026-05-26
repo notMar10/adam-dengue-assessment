@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="description" content="A.D.A.M — free dengue symptom screening, awareness, and prevention tips.">
     <meta name="theme-color" content="#0f1419">
     <title>A.D.A.M — Dengue Assessment</title>
@@ -35,9 +38,11 @@
             <span class="acronym-letter" data-meaning="Assessment" tabindex="0">A</span><span class="acronym-dot" aria-hidden="true">.</span>
             <span class="acronym-letter" data-meaning="Monitor" tabindex="0">M</span><span class="acronym-dot" aria-hidden="true">.</span>
         </h1>
-        <p class="subtitle">Learn about dengue, then use the symptom checker below</p>
+        <p class="subtitle">
+            <span class="subtitle-long">Learn about dengue, then use the symptom checker below</span>
+            <span class="subtitle-acronym">Automated <span class="subtitle-acronym-accent">Dengue</span> Assessment Monitor</span>
+        </p>
         <div class="hero-pills" aria-label="Quick facts">
-            <span class="brand-badge">Health screening</span>
             <span class="pill">7 symptoms</span>
             <span class="pill">~1 min screening</span>
             <span class="pill">Free &amp; private</span>
@@ -225,7 +230,18 @@
     <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
     <footer class="page-footer">
+        <div class="dedication-photo-wrap">
+            <img
+                src="assets/images/adam-placeholder.svg"
+                alt="Adam Almendrala"
+                class="dedication-photo"
+                width="96"
+                height="96"
+            >
+        </div>
+        <p class="dedication">Project dedicated to <strong>Adam Almendrala</strong></p>
         <p class="copyright">A.D.A.M &copy; <span id="year"></span></p>
+        <div class="brand-badge">Health screening</div>
     </footer>
 </div>
 
