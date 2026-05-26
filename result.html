@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.D.A.M — Your Result</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=optional">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js"></script>
+</head>
+<body>
+
+<div class="page">
+    <header class="brand">
+        <div class="brand-badge">Assessment complete</div>
+        <h1>Your <span>result</span></h1>
+        <p class="subtitle">Based on the symptoms you reported</p>
+    </header>
+
+    <main class="container">
+        <div class="card result-card">
+            <div class="card-header">
+                <h2>Dengue probability</h2>
+                <p>Screening score from symptom weights</p>
+            </div>
+
+            <div class="result-gauge" id="result-gauge">
+                <div class="result-gauge-ring">
+                    <div class="result-gauge-inner">
+                        <h2 id="result-probability">0%</h2>
+                        <p>Score</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="risk low-risk" id="result-risk">Low Risk</div>
+
+            <div class="note">
+                <p>
+                    This assessment is for screening purposes only and is not an official medical diagnosis.
+                    Please consult a healthcare professional immediately if symptoms worsen.
+                </p>
+            </div>
+
+            <a href="index.html" class="back-btn">← Check again</a>
+        </div>
+    </main>
+    <script>initResultPage();</script>
+
+    <footer class="page-footer">
+        <div class="dedication-photo-wrap">
+            <img
+                src="assets/images/adam-placeholder.svg"
+                alt="Adam Almendrala"
+                class="dedication-photo"
+                width="96"
+                height="96"
+            >
+        </div>
+        <p class="dedication">Project dedicated to <strong>Adam Almendrala</strong></p>
+        <p class="copyright">A.D.A.M &copy; <span id="year"></span></p>
+    </footer>
+</div>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

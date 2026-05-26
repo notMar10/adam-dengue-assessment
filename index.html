@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.D.A.M — Dengue Assessment</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=optional">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="page">
+    <header class="brand">
+        <div class="brand-badge">Health screening</div>
+        <h1>A.<span>D.</span>A.M</h1>
+        <p class="subtitle">Automated Dengue Assessment Monitor — select your symptoms below</p>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Symptom checklist</h2>
+                <p>Check all symptoms you are currently experiencing</p>
+            </div>
+
+            <form id="assessment-form">
+                <div class="symptoms-grid">
+
+                    <div class="symptom">
+                        <label>
+                            <input type="checkbox" name="fever">
+                            <span class="checkmark" aria-hidden="true"></span>
+                            <span class="symptom-icon" aria-hidden="true">🌡️</span>
+                            <span class="symptom-text">High Fever</span>
+                        </label>
+                    </div>
+
+                    <div class="symptom">
+                        <label>
+                            <input type="checkbox" name="headache">
+                            <span class="checkmark" aria-hidden="true"></span>
+                            <span class="symptom-icon" aria-hidden="true">🤕</span>
+                            <span class="symptom-text">Severe Headache</span>
+                        </label>
+                    </div>
+
+                    <div class="symptom">
+                        <label>
+                            <input type="checkbox" name="joint_pain">
+                            <span class="checkmark" aria-hidden="true"></span>
+                            <span class="symptom-icon" aria-hidden="true">🦴</span>
+                            <span class="symptom-text">Joint Pain</span>
+                        </label>
+                    </div>
+
+                    <div class="symptom">
+                        <label>
+                            <input type="checkbox" name="muscle_pain">
+                            <span class="checkmark" aria-hidden="true"></span>
+                            <span class="symptom-icon" aria-hidden="true">💪</span>
+                            <span class="symptom-text">Muscle Pain</span>
+                        </label>
+                    </div>
+
+                    <div class="symptom">
+                        <label>
+                            <input type="checkbox" name="rash">
+                            <span class="checkmark" aria-hidden="true"></span>
+                            <span class="symptom-icon" aria-hidden="true">🔴</span>
+                            <span class="symptom-text">Skin Rash</span>
+                        </label>
+                    </div>
+
+                    <div class="symptom">
+                        <label>
+                            <input type="checkbox" name="nausea">
+                            <span class="checkmark" aria-hidden="true"></span>
+                            <span class="symptom-icon" aria-hidden="true">🤢</span>
+                            <span class="symptom-text">Nausea / Vomiting</span>
+                        </label>
+                    </div>
+
+                    <div class="symptom">
+                        <label>
+                            <input type="checkbox" name="bleeding">
+                            <span class="checkmark" aria-hidden="true"></span>
+                            <span class="symptom-icon" aria-hidden="true">🩸</span>
+                            <span class="symptom-text">Bleeding Gums / Nose</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    Calculate probability
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </button>
+
+                <p class="form-footer">
+                    Results are for screening only. Seek medical care if symptoms are severe or worsening.
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="dedication-photo-wrap">
+            <img
+                src="assets/images/adam-placeholder.svg"
+                alt="Adam Almendrala"
+                class="dedication-photo"
+                width="96"
+                height="96"
+            >
+        </div>
+        <p class="dedication">Project dedicated to <strong>Adam Almendrala</strong></p>
+        <p class="copyright">A.D.A.M &copy; <span id="year"></span></p>
+    </footer>
+</div>
+
+<script src="assets/js/app.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
