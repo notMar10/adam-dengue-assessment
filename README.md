@@ -1,37 +1,8 @@
-# A.D.A.M — Static site (Vercel)
+A.D.A.M
+Automated Dengue Assessment Monitor
 
-**Standalone project** — no CodeIgniter, no PHP, no XAMPP.
+Dedicated to Adam Almendrala for inspiring innovation through technology and healthcare awareness.
 
-HTML + CSS + JavaScript only. Same design and scoring as the main app.
+A.D.A.M (Automated Dengue Assessment Monitor) is a web-based dengue probability assessment system developed using HTML, CSS, and JavaScript.
 
-## This folder is independent
-
-You can:
-
-- Move this folder anywhere on your PC
-- Use it as its **own GitHub repository**
-- Deploy on Vercel without the PHP project
-
-It does **not** need files from `adam/` (CodeIgniter).
-
-## Deploy on Vercel
-
-1. Create a new GitHub repo (e.g. `adam-dengue-vercel`) and push **this folder’s contents** (not the parent `adam` folder).
-2. On [vercel.com](https://vercel.com) → **Add New Project** → import that repo.
-3. **Root Directory:** leave blank (`.`).
-4. No build command. Deploy.
-
-## Local preview
-
-```powershell
-cd c:\xampp\htdocs\adam-dengue-vercel
-npx serve .
-```
-
-## Dedication photo
-
-Add `assets/images/adam.jpg` — optional. Placeholder shows if missing.
-
-## PHP version
-
-The full CodeIgniter app lives separately at `c:\xampp\htdocs\adam` (XAMPP).
+The system allows users to answer symptom-based questions and calculates the possible dengue risk level using a weighted scoring algorithm. Its goal is to provide a simple and accessible preliminary dengue screening tool for awareness and early monitoring purposes.
