@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A.D.A.M — free dengue symptom screening, awareness, and prevention tips.">
+    <meta name="theme-color" content="#0f1419">
     <title>A.D.A.M — Dengue Assessment</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/images/favicon.svg">
@@ -13,6 +15,18 @@
 </head>
 <body>
 
+<nav class="site-nav" id="site-nav" aria-label="Main navigation">
+    <a class="site-nav-logo" href="index.html" aria-label="A.D.A.M — Automated Dengue Assessment Monitor">
+        <span class="site-nav-logo-mark">A.<span class="site-nav-logo-accent">D.</span>A.M</span>
+        <span class="site-nav-logo-tagline">Dengue Assessment</span>
+    </a>
+    <div class="site-nav-links">
+        <a href="#awareness">Awareness</a>
+        <a href="#checklist">Symptoms</a>
+        <a href="#faq">FAQ</a>
+    </div>
+</nav>
+
 <div class="page">
     <header class="brand">
         <h1 class="brand-acronym" aria-label="Automated Dengue Assessment Monitor">
@@ -22,60 +36,73 @@
             <span class="acronym-letter" data-meaning="Monitor" tabindex="0">M</span><span class="acronym-dot" aria-hidden="true">.</span>
         </h1>
         <p class="subtitle">Learn about dengue, then use the symptom checker below</p>
+        <div class="hero-pills" aria-label="Quick facts">
+            <span class="pill">7 symptoms</span>
+            <span class="pill">~1 min screening</span>
+            <span class="pill">Free &amp; private</span>
+        </div>
     </header>
 
     <main class="container">
-        <section class="card awareness-card" aria-labelledby="awareness-heading">
+        <section class="card awareness-card" id="awareness" aria-labelledby="awareness-heading">
             <div class="card-header">
                 <h2 id="awareness-heading">Dengue awareness</h2>
                 <p>Important facts to protect yourself and your community</p>
             </div>
 
             <div class="awareness-body">
-                <article class="awareness-block">
-                    <h3>What is dengue?</h3>
-                    <p>
-                        Dengue is a viral infection spread mainly by <strong>Aedes</strong> mosquitoes
-                        (often active during the day). It is common in tropical and subtropical areas and can
-                        affect anyone, including children and adults.
-                    </p>
-                </article>
+                <details class="awareness-accordion" open>
+                    <summary>What is dengue?</summary>
+                    <div class="awareness-accordion-body">
+                        <p>
+                            Dengue is a viral infection spread mainly by <strong>Aedes</strong> mosquitoes
+                            (often active during the day). It is common in tropical and subtropical areas and can
+                            affect anyone, including children and adults.
+                        </p>
+                    </div>
+                </details>
 
-                <article class="awareness-block">
-                    <h3>Common signs &amp; symptoms</h3>
-                    <ul class="awareness-list">
-                        <li>Sudden high fever (often 3–7 days)</li>
-                        <li>Severe headache and pain behind the eyes</li>
-                        <li>Joint and muscle pain</li>
-                        <li>Skin rash, nausea, or vomiting</li>
-                        <li>Mild bleeding (nose or gums) in some cases</li>
-                    </ul>
-                </article>
+                <details class="awareness-accordion">
+                    <summary>Common signs &amp; symptoms</summary>
+                    <div class="awareness-accordion-body">
+                        <ul class="awareness-list">
+                            <li>Sudden high fever (often 3–7 days)</li>
+                            <li>Severe headache and pain behind the eyes</li>
+                            <li>Joint and muscle pain</li>
+                            <li>Skin rash, nausea, or vomiting</li>
+                            <li>Mild bleeding (nose or gums) in some cases</li>
+                        </ul>
+                    </div>
+                </details>
 
-                <article class="awareness-block awareness-alert">
-                    <h3>Seek care immediately if you notice</h3>
-                    <ul class="awareness-list">
-                        <li>Severe abdominal pain or persistent vomiting</li>
-                        <li>Bleeding gums, nosebleeds, or blood in vomit or stool</li>
-                        <li>Drowsiness, restlessness, or difficulty breathing</li>
-                        <li>Cold, clammy skin or very low urine output</li>
-                    </ul>
-                    <p class="awareness-alert-note">These may be signs of severe dengue — go to a hospital or clinic right away.</p>
-                </article>
+                <details class="awareness-accordion awareness-accordion--alert">
+                    <summary>Seek care immediately if you notice</summary>
+                    <div class="awareness-accordion-body">
+                        <ul class="awareness-list">
+                            <li>Severe abdominal pain or persistent vomiting</li>
+                            <li>Bleeding gums, nosebleeds, or blood in vomit or stool</li>
+                            <li>Drowsiness, restlessness, or difficulty breathing</li>
+                            <li>Cold, clammy skin or very low urine output</li>
+                        </ul>
+                        <p class="awareness-alert-note">These may be signs of severe dengue — go to a hospital or clinic right away.</p>
+                    </div>
+                </details>
 
-                <article class="awareness-block">
-                    <h3>Prevention tips</h3>
-                    <ul class="awareness-list awareness-list--prevention">
-                        <li><span aria-hidden="true">🪣</span> Remove stagnant water where mosquitoes breed (containers, tires, gutters)</li>
-                        <li><span aria-hidden="true">🦟</span> Use repellent, long sleeves, and window screens</li>
-                        <li><span aria-hidden="true">🏠</span> Keep surroundings clean and cover water storage</li>
-                        <li><span aria-hidden="true">🏥</span> Rest, drink fluids, and consult a doctor if fever persists</li>
-                    </ul>
-                </article>
+                <details class="awareness-accordion">
+                    <summary>Prevention tips</summary>
+                    <div class="awareness-accordion-body">
+                        <ul class="awareness-list awareness-list--prevention">
+                            <li><span aria-hidden="true">🪣</span> Remove stagnant water where mosquitoes breed (containers, tires, gutters)</li>
+                            <li><span aria-hidden="true">🦟</span> Use repellent, long sleeves, and window screens</li>
+                            <li><span aria-hidden="true">🏠</span> Keep surroundings clean and cover water storage</li>
+                            <li><span aria-hidden="true">🏥</span> Rest, drink fluids, and consult a doctor if fever persists</li>
+                        </ul>
+                    </div>
+                </details>
             </div>
         </section>
 
-        <div class="card">
+        <div class="card" id="checklist">
             <div class="card-header">
                 <h2>Symptom checklist</h2>
                 <p>Check all symptoms you are currently experiencing</p>
@@ -149,8 +176,9 @@
 
                 </div>
 
-                <button type="submit" class="btn-primary">
-                    Calculate probability
+                <button type="submit" class="btn-primary" id="submit-assessment">
+                    <span class="btn-label">Calculate probability</span>
+                    <span class="btn-spinner" aria-hidden="true"></span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                     </svg>
@@ -161,7 +189,39 @@
                 </p>
             </form>
         </div>
+
+        <section class="card faq-card" id="faq" aria-labelledby="faq-heading">
+            <div class="card-header">
+                <h2 id="faq-heading">Frequently asked questions</h2>
+                <p>Quick answers about dengue and this tool</p>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Is A.D.A.M. a medical diagnosis?</summary>
+                    <p>No. This tool provides a screening score based on symptoms you select. Only a healthcare professional can diagnose dengue.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What does the score percentage mean?</summary>
+                    <p>It reflects how many weighted symptoms you reported. A higher score suggests higher concern — not a confirmed infection.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Should I go to the hospital?</summary>
+                    <p>Go immediately if you have severe pain, persistent vomiting, bleeding, difficulty breathing, or feel very weak or confused.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is my data stored?</summary>
+                    <p>No. Your selections are not saved on a server. Results are passed only in the page URL when you view your score.</p>
+                </details>
+            </div>
+        </section>
     </main>
+
+    <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+        </svg>
+    </button>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
     <footer class="page-footer">
         <div class="dedication-photo-wrap">
